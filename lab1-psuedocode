@@ -1,0 +1,36 @@
+//Alexander McNulty
+
+//const int Count
+
+//create a base Currency class
+    //private:
+        //whole/currency name
+        //whole parts
+        //partial name
+        //partial parts
+    //public:
+        //Currency  -> the constructor
+        //virtual ~Currency
+        //addvalue();
+        //removevalue();
+
+//Class Euro:Public Currency
+    //create some contructore that automatically sets:
+        //whole/currency name
+        //whole parts
+        //partial name
+        //partial parts
+    
+//Class wallet
+    //private:
+        //Currency current_currencies[COUNT];
+    //public:
+        //Wallet(){
+        //    for(COUNT)
+        //       cin >> currency[i]
+        //}
+        //listCurrencies();
+        //listAllCurrencyValues()
+        //addSpecificCurency(int)
+        //removeSpecificCurrency(int)
+        //listSpecificCurrency(int)
