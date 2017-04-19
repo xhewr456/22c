@@ -14,19 +14,11 @@ class Wallet
 {
 private:
 	Currency **current_currencies = new Currency*[5];
-	double tempValue;
+	double inStreamTempValue;
 public:
-	//Currency **current_currencies = new Currency*[5];
 	Wallet();
-	//{
-		//current_currencies[0] = new Dollars();
-		//current_currencies[1] = new Euros();
-		//current_currencies[2] = new Rubles();
-		//current_currencies[3] = new Yuans();
-		//current_currencies[4] = new Pesos();
-	//}
 	~Wallet();
-	void listAllCurrencyValues();
+	void displayWalletFunds();
 	void zeroAllFunds();
 	void addCurrency(int type);
 	void subtractCurrency(int type);
@@ -35,7 +27,7 @@ public:
 	// input stream overloading
 	friend istream& operator >> (istream &inputStream, Wallet &refCurrencyObject)
 	{
-		inputStream >> refCurrencyObject.tempValue;
+		inputStream >> refCurrencyObject.inStreamTempValue;
 		return inputStream;
 	}
 

@@ -8,12 +8,11 @@ using namespace std;
 
 class Currency {
 private:
-	string currencyName; // = "default currency name";
-	string fractionalName; // = "default fractions name";
+	string currencyName; 
+	string fractionalName;
 	int wholeValue = 0;
 	int fractionalValue = 0;
 public:
-	//Currency(string wholeName = "whole", string partialName = "partial");
 	// constructor
 	Currency(string, string);
 
@@ -21,10 +20,6 @@ public:
 	virtual ~Currency();
 
 	void setName(string wholeName, string partialName);
-	void addWholeValue(int size);
-	void addFractionalValue(int size);
-	void subtractWholeValue(int size);
-	void subtractFractionalValue(int size);
 	void setFundsToZero();
 	double getCurrentFundsValue();
 	void balanceFraction();

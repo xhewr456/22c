@@ -17,13 +17,19 @@ Wallet::~Wallet()
 		delete current_currencies[i];
 	cout << "wallet class Deconstuctor\n";
 }
-void Wallet::listAllCurrencyValues()
+void Wallet::displayWalletFunds()
 {
+	int count = 0;  // counter for empty currencies
 	for (int i = 0; i < 5; i++)
 	{
-		if (current_currencies[i]->getCurrentFundsValue() >= 0)
+		if (current_currencies[i]->getCurrentFundsValue() > 0)
 			cout << *current_currencies[i] << endl;
+		else
+			count++;
 	}
+	// if all five currenices are zero, then display this message
+	if (count == 5)
+		cout << "the wallet contains no funds";
 }
 void Wallet::zeroAllFunds()
 {
@@ -34,17 +40,9 @@ void Wallet::zeroAllFunds()
 }
 void Wallet::addCurrency(int currencyType)
 {
-	*(current_currencies[currencyType]) + tempValue;
+	*(current_currencies[currencyType]) + inStreamTempValue;
 }
 void Wallet::subtractCurrency(int currencyType)
 {
-	*(current_currencies[currencyType]) - tempValue;
+	*(current_currencies[currencyType]) - inStreamTempValue;
 }
-
-// input stream overloading
-/*friend istream& operator >> (istream &inputStream, Wallet &refCurrencyObject)
-{
-inputStream >> refCurrencyObject.tempValue;
-}
-friend void requestCurrencyNumberValues(bool isAddition, Wallet &walletReference, int currencyType);*/
-//};
